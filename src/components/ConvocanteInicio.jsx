@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { Header, Container, Button, Grid, Box } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
-import FormularioRemoto from './FormularioRemoto';
-// import FormularioConvocatoria from 'remote/FormularioConvocatoria'
+import FormularioConvocatoria from 'remote/FormularioConvocatoria'
 export default function ConvocanteInicio() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -17,7 +16,13 @@ export default function ConvocanteInicio() {
     disponibilidad: '',
     archivo: null,
   });
-  
+  const perfil = JSON.parse(localStorage.getItem('perfilEstudiante')) || { 
+    nombre: 'Estudiante',
+    correo: 'correo@ejemplo.com',
+    carrera: 'No definida',
+    ciclo: '—',
+    habilidades: [],
+   };
 
   const handleChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -30,7 +35,7 @@ export default function ConvocanteInicio() {
   return (
     <>
       <Header variant="h1">Bienvenido, Csonvocante 👋</Header>
-    
+
       <Grid
         gridDefinition={[
           { colspan: { default: 12, xs: 6 } },
@@ -90,7 +95,7 @@ export default function ConvocanteInicio() {
           <Box variant="p">
             Accede a tus datos, edita tu información personal y mantén tu perfil actualizado.
           </Box>
-         <FormularioRemoto></FormularioRemoto>
+          {/* <FormularioConvocatoria seformData={formData}tFormData={setFormData} handleSubmit={handleSubmit} ></FormularioConvocatoria> */}
         </Container>
       </Grid>
     </>
