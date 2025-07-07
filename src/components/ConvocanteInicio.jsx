@@ -1,14 +1,35 @@
-import React from 'react';
+ 
+import React, { useState } from 'react';
 import { Header, Container, Button, Grid, Box } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
-
+import FormularioConvocatoria from 'remote/FormularioConvocatoria'
 export default function ConvocanteInicio() {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    nombre: '',
+    correo: '',
+    telefono: '',
+    rol: null,
+    habilidades: '',
+    experiencia: '',
+    modalidad: null,
+    disponibilidad: '',
+    archivo: null,
+  });
+  
 
+  const handleChange = (field, value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = () => {
+    console.log('Formulario enviado:', formData);
+    alert('Convocatoria registrada correctamente.');
+  };
   return (
     <>
-      <Header variant="h1">Bienvenido, Convocante 👋</Header>
-
+      <Header variant="h1">Bienvenido, Csonvocante 👋</Header>
+      <FormularioConvocatoria formData={formData}setFormData={setFormData} handleSubmit={handleSubmit} ></FormularioConvocatoria>
       <Grid
         gridDefinition={[
           { colspan: { default: 12, xs: 6 } },
@@ -68,6 +89,7 @@ export default function ConvocanteInicio() {
           <Box variant="p">
             Accede a tus datos, edita tu información personal y mantén tu perfil actualizado.
           </Box>
+         
         </Container>
       </Grid>
     </>
