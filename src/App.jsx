@@ -20,7 +20,7 @@ const App = () => {
     <>
 
       <Routes>
-        
+        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/perfil" element={isAuthenticated ? <Profile /> : <Navigate to="/login" />} />
         <Route path="/proyectos" element={isAuthenticated ? <Proyectos /> : <Navigate to="/login" />} />
         <Route path="/convocatorias" element={isAuthenticated ? <Convocatorias /> : <Navigate to="/login" />} />
