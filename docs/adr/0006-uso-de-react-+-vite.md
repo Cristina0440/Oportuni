@@ -26,7 +26,7 @@ Dado que el sistema será dividido en múltiples micro frontends, necesitamos un
 
 ## Decision Outcome
 
-React + Vite, porque combina la potencia del ecosistema React con la velocidad y simplicidad de Vite como bundler moderno. Facilita la creación de interfaces desacopladas, modulares y escalables, además de integrarse sin fricción con Webpack 5 Module Federation.
+React + Vite, porque combina la potencia del ecosistema React con la velocidad y simplicidad de Vite como bundler moderno. Facilita la creación de interfaces desacopladas, modulares y escalables, además de integrarse sin fricción con Module Federation.
 
 ### Positive Consequences 
 
