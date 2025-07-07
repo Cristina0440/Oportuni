@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Header, Container, Button, Grid, Box } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
-import FormularioConvocatoria from 'remote/FormularioConvocatoria'
+// import FormularioConvocatoria from 'remote/FormularioConvocatoria'
 export default function ConvocanteInicio() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ export default function ConvocanteInicio() {
   return (
     <>
       <Header variant="h1">Bienvenido, Csonvocante 👋</Header>
-      <FormularioConvocatoria formData={formData}setFormData={setFormData} handleSubmit={handleSubmit} ></FormularioConvocatoria>
+    
       <Grid
         gridDefinition={[
           { colspan: { default: 12, xs: 6 } },

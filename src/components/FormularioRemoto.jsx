@@ -3,16 +3,27 @@ import React, { useEffect, useState } from 'react';
 
 export default function FormularioRemoto() {
   const [Formulario, setFormulario] = useState(null);
+ const [formData, setFormData] = useState({
+    nombre: '',
+    correo: '',
+    telefono: '',
+    rol: null,
+    habilidades: '',
+    experiencia: '',
+    modalidad: null,
+    disponibilidad: '',
+    archivo: null,
+  });
+  
 
-  useEffect(() => {
-    import('formulario/FormularioConvocatoria')
-      .then((mod) => setFormulario(() => mod.default))
-      .catch((err) => {
-        console.error('Error al cargar microfrontend:', err);
-      });
-  }, []);
+  const handleChange = (field, value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
-  if (!Formulario) return <p>Cargando formulario remoto...</p>;
-
-  return <Formulario />;
+  const handleSubmit = () => {
+    console.log('Formulario enviado:', formData);
+    alert('Convocatoria registrada correctamente.');
+  };
+ 
+  return   <FormularioConvocatoria formData={formData}setFormData={setFormData} handleSubmit={handleSubmit} ></FormularioConvocatoria>;
 }
