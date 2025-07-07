@@ -15,6 +15,8 @@ export default function EstudianteLayout() {
   const navigationItems = [
     { type: 'link', text: 'Inicio', href: '/estudiante' },
     { type: 'link', text: 'Perfil', href: '/estudiante/perfil' },
+    { type: 'link', text: 'Formulario Convocatoria', href: '/estudiante/formulario' },
+    { type: 'link', text: 'Chat', href: '/estudiante/chatter' },
     { type: 'divider' },
   ];
 
