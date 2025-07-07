@@ -2,7 +2,7 @@
 
 * Status: accepted 
 * Deciders: Equipo de Desarrollo Frontend 
-* Date: 05/7/2025, 6:25:29 p. m. 
+* Date: 02/7/2025, 6:25:29 p. m. 
 * Template used: [MADR 3.0.0](https://adr.github.io/madr/) 
 
 Technical Story: Se requiere una plataforma de despliegue eficiente, escalable y fácil de integrar para los distintos micro frontends desarrollados en React (con Vite), con soporte para SPA, CDN global, y HTTPS automático. 
