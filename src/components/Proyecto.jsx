@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_PROYECTOS } from '../graphql/queries';
 import { CREAR_PROYECTO, ELIMINAR_PROYECTO } from '../graphql/mutations';
+import FormularioConvocatoria from 'remote/FormularioConvocatoria'
 import {
   Container,
   Header,
@@ -11,6 +12,7 @@ import {
   Button,
   Box,
 } from '@cloudscape-design/components';
+import FormularioRemoto from './FormularioRemoto';
 
 const Proyectos = () => {
   const { data, loading, error, refetch } = useQuery(GET_PROYECTOS);
@@ -61,28 +63,7 @@ const Proyectos = () => {
         <hr style={{ margin: '2rem 0' }} />
 
         <Header variant="h2">Nuevo Proyecto</Header>
-        <SpaceBetween size="m">
-          <FormField label="Título">
-            <Input name="titulo" value={nuevo.titulo} onChange={handleChange('titulo')} />
-          </FormField>
-          <FormField label="Descripción">
-            <Input name="descripcion" value={nuevo.descripcion} onChange={handleChange('descripcion')} />
-          </FormField>
-          <FormField label="Organizador">
-            <Input name="organizador" value={nuevo.organizador} onChange={handleChange('organizador')} />
-          </FormField>
-          <FormField label="Duración">
-            <Input name="duracion" value={nuevo.duracion} onChange={handleChange('duracion')} />
-          </FormField>
-          <FormField label="Fecha">
-            <Input name="fecha" type="date" value={nuevo.fecha} onChange={handleChange('fecha')} />
-          </FormField>
-          <FormField label="ID de Usuario">
-            <Input name="usuarioId" value={nuevo.usuarioId} onChange={handleChange('usuarioId')} />
-          </FormField>
-
-          <Button variant="primary" onClick={handleCrear}>Crear Proyecto</Button>
-        </SpaceBetween>
+        <FormularioRemoto></FormularioRemoto>
       </Container>
     </div>
   );

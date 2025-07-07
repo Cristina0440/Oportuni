@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Header, Container, Button, Grid, Box } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
+import FormularioRemoto from './FormularioRemoto';
 // import FormularioConvocatoria from 'remote/FormularioConvocatoria'
 export default function ConvocanteInicio() {
   const navigate = useNavigate();
@@ -89,7 +90,7 @@ export default function ConvocanteInicio() {
           <Box variant="p">
             Accede a tus datos, edita tu información personal y mantén tu perfil actualizado.
           </Box>
-         
+         <FormularioRemoto></FormularioRemoto>
         </Container>
       </Grid>
     </>

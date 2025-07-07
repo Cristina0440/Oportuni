@@ -1,6 +1,6 @@
 // src/components/FormularioRemoto.jsx
 import React, { useEffect, useState } from 'react';
-
+import FormularioConvocatoria from 'remote/FormularioConvocatoria'
 export default function FormularioRemoto() {
   const [Formulario, setFormulario] = useState(null);
  const [formData, setFormData] = useState({
