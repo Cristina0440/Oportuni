@@ -1,0 +1,25 @@
+.chatter-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.burbujas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.burbuja {
+  background-color: #7FDBFF;
+  color: black;
+  padding: 15px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.burbuja:hover {
+  background-color: #39CCCC;
+}

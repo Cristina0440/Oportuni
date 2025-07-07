@@ -1,0 +1,33 @@
+.formulario-container {
+  max-width: 600px;
+  margin: auto;
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.formulario-container h2 {
+  text-align: center;
+}
+
+.formulario-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.formulario-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario-container button:hover {
+  background-color: #005fa3;
+}

@@ -49,6 +49,8 @@ const App = () => {
         <Route path="/estudiante" element={<EstudianteLayout />}>
           <Route index element={<EstudianteInicio />} /> {/* /estudiante */}
           <Route path="perfil" element={<PerfilEstudiante />} /> {/* /estudiante/perfil */}
+          <Route path="formulario" element={<FormularioConvocatoria />} /> {/* /estudiante/formulario */}
+          <Route path="chatter" element={<Chatter />} /> {/* /estudiante/chatter */}
         </Route>
         
       </Routes>
