@@ -14,6 +14,7 @@ import {
   Grid,
   Modal,
 } from '@cloudscape-design/components';
+import FormularioRemoto from './FormularioRemoto';
 
 const Proyectos = () => {
   const navigate = useNavigate();
@@ -36,7 +37,26 @@ const Proyectos = () => {
   };
 
   const handleCrear = async () => {
-    await crearProyecto({ variables: { input: nuevo } });
+console.log(nuevo)
+ 
+const camposValidos = ['titulo', 'descripcion', 'organizador', 'duracion', 'fecha', 'usuarioId'];
+
+const limpiarYValidar = (obj) => {
+  const limpio = {};
+
+  for (const key of camposValidos) {
+    if (obj.hasOwnProperty(key)) {
+      limpio[key] = obj[key];
+    } else {
+      return null; // Falta un campo requerido
+    }
+  }
+
+  return limpio;
+};
+
+const validado = limpiarYValidar(nuevo);
+    await crearProyecto({ variables: { input: validado } });
     refetch();
     setModalVisible(false);
     setNuevo({
@@ -110,7 +130,8 @@ const Proyectos = () => {
         }
       >
         <SpaceBetween size="m">
-          <FormField label="Título">
+          <FormularioRemoto handleSubmit={handleCrear} formData={nuevo} setFormData={setNuevo}></FormularioRemoto>
+          {/* <FormField label="Título">
             <Input value={nuevo.titulo} onChange={handleChange('titulo')} />
           </FormField>
           <FormField label="Descripción">
@@ -127,7 +148,7 @@ const Proyectos = () => {
           </FormField>
           <FormField label="ID de Usuario">
             <Input value={nuevo.usuarioId} onChange={handleChange('usuarioId')} />
-          </FormField>
+          </FormField> */}
         </SpaceBetween>
       </Modal>
     </div>

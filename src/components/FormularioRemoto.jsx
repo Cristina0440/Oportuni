@@ -1,29 +1,29 @@
 // src/components/FormularioRemoto.jsx
 import React, { useEffect, useState } from 'react';
 import FormularioConvocatoria from 'remote/FormularioConvocatoria'
-export default function FormularioRemoto() {
+export default function FormularioRemoto({formData,setFormData,handleSubmit}) {
   const [Formulario, setFormulario] = useState(null);
- const [formData, setFormData] = useState({
-    nombre: '',
-    correo: '',
-    telefono: '',
-    rol: null,
-    habilidades: '',
-    experiencia: '',
-    modalidad: null,
-    disponibilidad: '',
-    archivo: null,
-  });
+//  const [formData, setFormData] = useState({
+//     nombre: '',
+//     correo: '',
+//     telefono: '',
+//     rol: null,
+//     habilidades: '',
+//     experiencia: '',
+//     modalidad: null,
+//     disponibilidad: '',
+//     archivo: null,
+//   });
   
 
-  const handleChange = (field, value) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-  };
+//   const handleChange = (field, value) => {
+//     setFormData((prev) => ({ ...prev, [field]: value }));
+//   };
 
-  const handleSubmit = () => {
-    console.log('Formulario enviado:', formData);
-    alert('Convocatoria registrada correctamente.');
-  };
+//   const handleSubmit = () => {
+//     console.log('Formulario enviado:', formData);
+//     alert('Convocatoria registrada correctamente.');
+//   };
  
   return   <FormularioConvocatoria formData={formData}setFormData={setFormData} handleSubmit={handleSubmit} ></FormularioConvocatoria>;
 }
