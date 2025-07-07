@@ -7,19 +7,22 @@ import Cookies from 'js-cookie';
 const Profile = () => {
   const [form, setForm] = useState({ names: '', lastName: '', username: '' });
 
-  const rol = localStorage.getItem('rolUsuario'); // 👈 obtenemos el rol
+  const rol = localStorage.getItem('rolUsuario');
   const token = Cookies.get('token');
   const userId = Cookies.get('userId');
 
   const { data, loading, error, refetch } = useQuery(GET_USER_BY_ID, {
-    variables: { id: userId }
+    variables: { id: userId },
+    skip: !userId,
   });
 
   const [updateUser] = useMutation(UPDATE_USER);
 
   useEffect(() => {
-    if (data) console.log('[Profile] Datos recibidos:', data);
-    if (error) console.error('[Profile] Error:', error);
+    if (data?.getUserById?.email && !error) {
+      console.log('[Profile] Seteando cookie email:', data.getUserById.email);
+      Cookies.set('email', data.getUserById.email, { path: '/' });
+    }
   }, [data, error]);
 
   if (!token) return <p>Token no encontrado. Por favor inicia sesión.</p>;
