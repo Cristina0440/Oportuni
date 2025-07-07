@@ -10,7 +10,7 @@ const SeleccionRol = () => {
 
     // Redirigir a la vista correcta
     if (rol === 'estudiante') {
-      navigate('/perfil-estudiante');
+      navigate('/estudiante');
     } else if (rol === 'convocante') {
       navigate('/convocante');
     }

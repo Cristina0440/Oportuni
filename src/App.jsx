@@ -11,6 +11,8 @@ import PerfilConvocante from './components/PerfilConvocante';
 import PerfilEstudiante from './components/PerfilEstudiante';
 import ConvocanteInicio from './components/ConvocanteInicio';
 import ConvocanteLayout from './components/ConvocanteLayout';
+import EstudianteInicio from './components/EstudianteInicio';
+import EstudianteLayout from './components/EstudianteLayout';
 import React from 'react';
 
 const App = () => {
@@ -27,8 +29,6 @@ const App = () => {
         <Route path="/convocado" element={isAuthenticated ? <Convocado /> : <Navigate to="/login" />} />
         
 
-        
-        <Route path="/perfil-estudiante" element={<PerfilEstudiante />} />
 
         {/* Público */}
         <Route path="/login" element={<LoginGithub />} />
@@ -43,6 +43,12 @@ const App = () => {
           <Route path="proyectos" element={<Proyectos />} /> {/* /convocante/proyectos */}
           <Route path="perfil" element={<PerfilConvocante />} /> {/* /convocante/perfil */}
           <Route path="convocados" element={<Convocado />} /> {/* /convocante/convocados */}
+        </Route>  
+
+        {/* Estudiante con layout persistente */}
+        <Route path="/estudiante" element={<EstudianteLayout />}>
+          <Route index element={<EstudianteInicio />} /> {/* /estudiante */}
+          <Route path="perfil" element={<PerfilEstudiante />} /> {/* /estudiante/perfil */}
         </Route>
         
       </Routes>
