@@ -13,6 +13,9 @@ import ConvocanteInicio from './components/ConvocanteInicio';
 import ConvocanteLayout from './components/ConvocanteLayout';
 import EstudianteInicio from './components/EstudianteInicio';
 import EstudianteLayout from './components/EstudianteLayout';
+import FormularioConvocatoria from './components/FormularioConvocatoria';
+import Chatter from './components/Chatter';
+
 import React from 'react';
 
 const App = () => {
@@ -49,6 +52,8 @@ const App = () => {
         <Route path="/estudiante" element={<EstudianteLayout />}>
           <Route index element={<EstudianteInicio />} /> {/* /estudiante */}
           <Route path="perfil" element={<PerfilEstudiante />} /> {/* /estudiante/perfil */}
+          <Route path="formulario" element={<FormularioConvocatoria />} /> {/* /estudiante/formulario */}
+          <Route path="chatter" element={<Chatter />} /> {/* /estudiante/chatter */}
         </Route>
         
       </Routes>
