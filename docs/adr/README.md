@@ -11,6 +11,7 @@ This log lists the architectural decisions for this project.
 * [ADR-0004](0004-uso-de-mongodb-como-base-de-datos-nosql.md) - Uso de MongoDB como base de datos NoSQL - [accepted]
 * [ADR-0005](0005-uso-de-event-bus-con-rabbitmq.md) - Uso de Event Bus con RabbitMQ - [deprecated]
 * [ADR-0006](0006-uso-de-react-+-vite.md) - Uso de React + Vite - [accepted]
+* [ADR-0007](0007-uso-firebase.md) - Uso Firebase - [accepted]
 
 <!-- tocstop -->
 
