@@ -13,6 +13,9 @@ import ConvocanteInicio from './components/ConvocanteInicio';
 import ConvocanteLayout from './components/ConvocanteLayout';
 import EstudianteInicio from './components/EstudianteInicio';
 import EstudianteLayout from './components/EstudianteLayout';
+import FormularioConvocatoria from './components/FormularioConvocatoria';
+import Chatter from './components/Chatter';
+
 import React from 'react';
 
 const App = () => {
