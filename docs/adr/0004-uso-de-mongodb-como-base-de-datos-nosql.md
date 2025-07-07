@@ -2,7 +2,7 @@
 
 * Status: accepted 
 * Deciders: Equipo de Backend 
-* Date: 7/7/2025, 5:04:52 p. m. 
+* Date: 18/06/2025, 5:04:52 p. m. 
 * Template used: [MADR 3.0.0](https://adr.github.io/madr/) 
 
 Technical Story: Algunos módulos del sistema requieren almacenamiento flexible de documentos con estructuras que pueden variar según el contexto, como los perfiles de usuario o las descripciones personalizadas de proyectos. Se necesita una solución de persistencia orientada a documentos. 

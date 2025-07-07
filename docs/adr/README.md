@@ -9,6 +9,8 @@ This log lists the architectural decisions for this project.
 * [ADR-0002](0002-uso-de-microfrontends.md) - Uso de Microfrontends - [accepted]
 * [ADR-0003](0003-uso-de-graphql-federation.md) - Uso de GraphQL Federation - [accepted]
 * [ADR-0004](0004-uso-de-mongodb-como-base-de-datos-nosql.md) - Uso de MongoDB como base de datos NoSQL - [accepted]
+* [ADR-0005](0005-uso-de-event-bus-con-rabbitmq.md) - Uso de Event Bus con RabbitMQ - [deprecated]
+* [ADR-0006](0006-uso-de-react-+-vite.md) - Uso de React + Vite - [accepted]
 
 <!-- tocstop -->
 
