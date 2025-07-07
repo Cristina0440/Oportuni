@@ -17,6 +17,8 @@ export default function EstudianteLayout() {
     { type: 'link', text: 'Perfil', href: '/estudiante/perfil' },
     { type: 'link', text: 'Formulario Convocatoria', href: '/estudiante/formulario' },
     { type: 'link', text: 'Chat', href: '/estudiante/chatter' },
+    { type: 'link', text: 'Mis Convocatorias', href: '/estudiante/mis-convocatorias' },
+
     { type: 'divider' },
   ];
 

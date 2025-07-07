@@ -15,6 +15,7 @@ import EstudianteInicio from './components/EstudianteInicio';
 import EstudianteLayout from './components/EstudianteLayout';
 import FormularioConvocatoria from './components/FormularioConvocatoria';
 import Chatter from './components/Chatter';
+import MisConvocatorias from './components/MisConvocatorias';
 
 import React from 'react';
 
@@ -54,6 +55,7 @@ const App = () => {
           <Route path="perfil" element={<PerfilEstudiante />} /> {/* /estudiante/perfil */}
           <Route path="formulario" element={<FormularioConvocatoria />} /> {/* /estudiante/formulario */}
           <Route path="chatter" element={<Chatter />} /> {/* /estudiante/chatter */}
+          <Route path="mis-convocatorias" element={<MisConvocatorias />} />
         </Route>
         
       </Routes>
