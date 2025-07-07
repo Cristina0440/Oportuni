@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles/FormularioConvocatoria.css';
 import { useMutation } from '@apollo/client';
-import { EDITAR_PERFIL } from '../graphql/mutations';
+import { UPDATE_USER } from '../graphql/mutations';
 import Cookies from 'js-cookie';
 
 const FormularioConvocatoria = () => {
@@ -16,7 +16,7 @@ const FormularioConvocatoria = () => {
   const userId = Cookies.get('userId');
   const token = Cookies.get('token');
 
-  const [editarPerfil] = useMutation(EDITAR_PERFIL, {
+  const [editarPerfil] = useMutation(UPDATE_USER, {
     context: {
       headers: {
         authorization: `Bearer ${token}`
