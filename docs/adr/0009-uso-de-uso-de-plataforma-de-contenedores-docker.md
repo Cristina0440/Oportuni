@@ -2,7 +2,7 @@
 
 * Status: accepted 
 * Deciders: Equipo Backend 
-* Date: 7/7/2025, 6:51:31 p. m. 
+* Date: 05/7/2025, 6:51:31 p. m. 
 * Template used: [MADR 3.0.0](https://adr.github.io/madr/) 
 
 Technical Story: Contenerización del backend y servicios auxiliares del sistema de bolsa de proyectos universitarios. 
