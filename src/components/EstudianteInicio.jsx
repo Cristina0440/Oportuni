@@ -7,7 +7,7 @@ export default function EstudianteInicio() {
 
   return (
     <>
-      <Header variant="h1">Estudiante, Convocante 👋</Header>
+      <Header variant="h1">Estudiante 👋</Header>
 
       <Grid
         gridDefinition={[

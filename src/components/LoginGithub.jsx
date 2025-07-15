@@ -1,9 +1,9 @@
-import React, { useEffect, useContext } from 'react'; // 👈 Agregamos useContext aquí
+import React, { useEffect, useContext } from 'react'; 
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button, Spinner } from '@cloudscape-design/components';
 import { useMutation } from '@apollo/client';
 import { REGISTER_WITH_GITHUB } from '../graphql/mutations';
-import { AuthContext } from '../AuthContext'; // 👈 Asegúrate que la ruta esté bien
+import { AuthContext } from '../AuthContext'; 
 
 const clientId = import.meta.env.VITE_GITHUB_CLIENT_ID;
 const redirectUri = import.meta.env.VITE_GITHUB_REDIRECT_URI;
@@ -26,7 +26,7 @@ export default function LoginGithub() {
         const user = res.data?.registerUserWithGithub;
 
         if (user?.token && user?.id) {
-          login(user.token, user.id); // ✅ Usamos el login del contexto
+          login(user.token, user.id); // 
           localStorage.setItem('perfilTemporal', JSON.stringify(user));
           navigate('/seleccion-rol');
         }
